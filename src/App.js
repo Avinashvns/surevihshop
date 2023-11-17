@@ -5,6 +5,9 @@ import Homepage from './page/homepage/Homepage';
 import SignIn from './page/sign&login/Signin';
 import SupplierHomepage from './page/homepage/SupplierHomepage';
 import CustomerHomaepage from './page/homepage/CustomerHomepage';
+import SignUp from './page/sign&login/Signup';
+import ApiCaller from './Component/Apicaller';
+
 
 function App() {
   return (
@@ -15,8 +18,8 @@ function App() {
           <Route path='/supplierhome' element={<SupplierHomepage />} />
           <Route path='/customerhome' element={<CustomerHomaepage />} />
           <Route path='/signin' element={<SignIn />} />
-
-          
+          <Route path='/signup' element={<SignUp />} />   
+          <Route path='/apicaller' element={<ApiCaller />} /> 
         </Routes>
       </BrowserRouter>
     </div>
