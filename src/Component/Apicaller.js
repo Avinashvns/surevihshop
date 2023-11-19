@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { Box, Button, TextField, Typography } from "@mui/material";
+import ProductCard from './Productcard';
 
 export default function ApiCaller() {
+
   const [data, setData] = useState([])
   // const [value,setValue] = useState({})
-  const [pname,setPname] =useState('')
-  const [price, setPrice] =useState('')
 
-  const [status, setStatus]=useState('')
+  const [pname, setPname] = useState('')
+  const [price, setPrice] = useState('')
 
-  const pNamehandler=(event)=>{
+  const [status, setStatus] = useState('')
+
+  const pNamehandler = (event) => {
     setPname(event.target.value)
     console.log(pname);
   }
 
-  const pricehandler=(event)=>{
+  const pricehandler = (event) => {
     setPrice(event.target.value)
     console.log(price);
   }
@@ -43,8 +46,11 @@ export default function ApiCaller() {
       });
   }, [])
 
+
+
   const handlerApi = () => {
-    console.log(pname , price);
+
+    console.log(pname, price);
 
     // var mypname="";
     // var myprice= "";
@@ -72,14 +78,12 @@ export default function ApiCaller() {
       });
 
   }
-  // console.warn("Data : ", data);
+  console.warn("Data : ", data);
   return (
     <Box>
       <Typography variant="h2" >Welcome</Typography>
       <TextField variant='outlined' label='Product Name' id='pname' value={pname} onChange={pNamehandler}></TextField>
       <TextField variant='outlined' label='Price' id='price' type='number' onChange={pricehandler} ></TextField>
-      
-    
       {/* {
         data.map((item) =>
           <Box width={500} style={{ border: '2px solid black' }} textAlign='start' padding={5} my={2} >
@@ -87,13 +91,18 @@ export default function ApiCaller() {
             <Typography variant="h6" py={1} >{item.title}</Typography>
             <Typography variant="h6" py={1} >{item.price}</Typography>
             <Typography variant="h6" py={1} >{item.published}</Typography>
-          </Box>
-          
+          </Box>    
         )
       } */}
 
       <Button variant="contained" onClick={handlerApi}>Save</Button>
       <Typography variant="h2" >{status}</Typography>
+
+      <ProductCard />
+
+
     </Box>
   );
 }
+
+
