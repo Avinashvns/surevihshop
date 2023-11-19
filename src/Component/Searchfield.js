@@ -48,7 +48,7 @@ const Search = styled('div')(({ theme }) => ({
 
 export default function SearchField(){
     return (
-        <Search style={{flexGrow: 1}}>
+        <Search style={{flexGrow: 1 }}>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
