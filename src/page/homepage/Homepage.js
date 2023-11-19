@@ -4,6 +4,7 @@ import React from 'react'
 
 import Header from '../../Component/Header';
 import HomeContent1 from '../../Component/Homecontent1';
+import Footer from '../../Component/Footer';
 
 export default function Homepage(){
     return (
@@ -18,6 +19,9 @@ export default function Homepage(){
                 {/* Content */}
                 <HomeContent1 />
             </div>
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 }

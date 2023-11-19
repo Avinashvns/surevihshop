@@ -6,7 +6,7 @@ import Sidebars from './Sidebar';
 
 export default function HomeContent1() {
     return (
-        <Box py={5}>
+        <Box paddingTop={5}>
             <Typography paddingBottom={5} variant='h2'>Out Top Product</Typography>
 
             <Grid container >
