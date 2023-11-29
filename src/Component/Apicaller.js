@@ -52,8 +52,8 @@ export default function ApiCaller() {
 
     console.log(pname, price);
 
-    // var mypname="";
-    // var myprice= "";
+    var mypname="";
+    var myprice= "";
     fetch(`http://surevih.in/api/saveproduct?productname=${pname}&price=${price}`)
       .then(response => {
         if (response.ok) {
@@ -76,6 +76,7 @@ export default function ApiCaller() {
         console.error('There was a problem with the fetch operation:', error);
         setStatus("Errors")
       });
+    
 
   }
   console.warn("Data : ", data);
@@ -98,7 +99,7 @@ export default function ApiCaller() {
       <Button variant="contained" onClick={handlerApi}>Save</Button>
       <Typography variant="h2" >{status}</Typography>
 
-      <ProductCard />
+      {/* <ProductCard /> */}
 
 
     </Box>
